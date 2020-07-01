@@ -103,11 +103,11 @@ def results(param):
         print('Wrong dimensions')
     df_confusion.index.name = 'Actual'
     print(df_confusion)
-    with open('test.csv','a') as fd:
+    with open('experiment2_results.csv','a') as fd:
         fd.write('\n\nWeibull param: ' + str(param) + '\n')
         fd.write('Test loss: ' + str(test_acc[0]) + '\n')
         fd.write('Test acc: ' + str(test_acc[1]) + '\n')
-    df_confusion.to_csv('test.csv', mode='a')
+    df_confusion.to_csv('experiment2_results.csv', mode='a')
 
 # Stepwise increase the parameter with 0.1 after every 5 runs
 param = 1
